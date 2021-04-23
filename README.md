@@ -1,5 +1,5 @@
 # Robotic-Object-Contour-Measurement-Dataset
-A dataset for one-shot learning based contour of intereset extraction
+A dataset for one-shot learning based contour of intereset extraction. Contact with qinfangbo2013@ia.ac.cn if you have any questions about the dataset.
 
 This folder contains the ROCM dataset and the MF-ODS evaluation scripts.
 
@@ -41,13 +41,19 @@ Since CPI map is a special case of edge/contour map, we follow the edge/contour/
 Example:
 
 To test on the circular CPI on object 1 in the query image /query-images/object_1_5.jpg, 
+
 we use /query-labels/object_1_5_arc_0.png as the CPI GT,
 
 then,
+
 use /query-images/object_1_5.jpg as the query input, 
+
 use /support-images/object_1_1.jpg as the support image, 
+
 use /support-labels/object_1_1_arc_0.png as the support CPI annotation,
+
 use /support-masks/object_1_1.png as the support object foreground annotation,
+
 to predict the CPI image /test-rsts/object_1_5_arc_0.png using one-shot learning based CNN model.
 
 To evaluate the accuracy of CPI extraction, we compare  /query-labels/object_1_5_arc_0.png and /test-rsts/object_1_5_arc_0.png using the MF-ODS evaluation scripts.
@@ -55,10 +61,13 @@ To evaluate the accuracy of CPI extraction, we compare  /query-labels/object_1_5
 Note that the folders with the suffix '-extra' and the folders without the suffix '-extra' only differ in how the support image is captured, which correspond to the '1st frame mode' and 'cross-device mode'. More details is found in [1].
 
 4. The MF-ODS evaluation scripts are provided in
+
 |--- eval
+
 |--- eval-extras
 
 Configure the paths in demoBatchEval.m and run it with Matlab.
+
 Note that this code is based on [2], and the misalignment tolerance parameter is set in correspondPixels.cc. If you need modify it, you need to re-compile correspondPixels.cc to correspondPixels.mexa64 using build.sh.
 
 
