@@ -63,4 +63,5 @@ Note that this code is based on [2], and the misalignment tolerance parameter is
 
 
 [1] Contour Primitive of Interest Extraction Network Based on One-Shot Learning for Object-Agnostic Vision Measurement, ICRA 2021, https://arxiv.org/abs/2010.03325
+
 [2] https://github.com/Lavender105/DFF
